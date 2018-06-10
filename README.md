@@ -11,14 +11,7 @@ This project is part of an internship assignment which aimed at creating tiled b
 ### OpenstreetsNL style and shapefiles
 The openstreets-nl style example is based on a CartoCSS style and open data from OpenStreetMap and Natural Earth. The openstreets-nl-tilemill project is based on individual shapefiles, which means that there is no need for connecting a PostGIS database with the Tilemill project. The openstreets-nl-tilemill including the relevant shapefiles can be downloaded [here](https://ingmapping.com/openstreets-nl/openstreets-nl.zip).
 
-
-To download the styles and shapefiles:
-
-```
-    wget https://ingmapping.com/openstreets-nl/openstreets-nl.zip
-```
-
-Shapefile original sources:
+Shapefile original data sources:
 * airports.shp: Contains the shapes of the aiports in the Netherlands. The original data source was the BBG2012 data set  (Bestand Bodemgebruik 2012) which contains information regarding the land use in the Netherlands. More information on the BBG2012 can be found [here](https://data.overheid.nl/data/dataset/bestand-bodemgebruik-2012-shape-file).
 * BAG-panden.shp: Contains the shapes of buildings in the Netherlands. The original data source was the BAG (Basisregistraties Adressen en Gebouwen) data set which contains information of adresses and buildings in the Netherlands. The data was downloaded by exporting the features from a WFS endpoint into a shapefile with QGIS. More information on how to do this [here](http://pdok-ngr.readthedocs.io/downloaden.html). More information on the BAG data set can be found [here](https://data.overheid.nl/data/dataset/basisregistratie-adressen-en-gebouwen--bag-).
 * BAG-Woonplaatsgrenzen.shp: Contains the shapes of the residence borders in the Netherlands. The original data can be downloaded [here](http://www.imergis.nl/shp/BAG-Woonplaatsgrenzen-shp.zip). It was an extract from the BAG (Basisregistraties Adressen en Gebouwen). More information on the BAG data set can be found [here](https://data.overheid.nl/data/dataset/basisregistratie-adressen-en-gebouwen--bag-). More information on BAG extract can be found [here](https://www.kadaster.nl/-/bag-extract). 
@@ -45,7 +38,7 @@ In this openstreets-nl-tilemill repository instructions are given on how to set-
 
 ## Tilemill set up
 
-### Set up Tilemill with Docker (docker-tilemill)
+### Set up openstreets-nl and Tilemill with Docker 
 
 How to build the image:
 
@@ -59,15 +52,12 @@ or
 docker pull ingmapping/tilemill
 ```
 
-To run you must expose 20008 and 20009 port using -p 20008:20008 -p 20009:20009. How to run the container:
+To run the container with tilemill and openstreets-nl:
 
 ```
-docker run --name="docker-tilemill" -p 20008:20008 -p 20009:20009 -d -t ingmapping/tilemill
-```
-To use your local projects you cant mount your project direcotry using -v argument. How to mount your local ~/Documents/Mapbox in the container in order to work on data from your local filesystem: 
-
-```
-docker run -d --name="docker-tilemill" -p 20008:20008 -p 20009:20009 -v ~/Documents/MapBox/project/:/root/Documents/MapBox/project/ -t ingmapping/tilemill
+git clone https://github.com/ingmapping/openstreets-nl-tilemill.git
+cd openstreets-nl-tilemill
+./run.sh
 ```
 
 To use the container, open your browser at:
@@ -76,7 +66,9 @@ To use the container, open your browser at:
 http://localhost:20009
 ```
 
-### Tilemill manual installation from source
+More information on how to use docker-tilemill: https://github.com/ingmapping/docker-tilemill. 
+
+### Set up openstreets-nl and Tilemill manually from source
 
 To install from source just do:
 ```
@@ -98,15 +90,7 @@ and then go to `localhost:20009` in your web browser
 
 #### Download shapefiles and styles
 
-Option 1: You can download the shapefiles and styles by running the openstreets-nl-setup.sh script. This creates the project directory at ~/Documents/MapBox/project/openstreets-nl. 
-
-```
-    git clone https://github.com/ingmapping/openstreets-nl-tilemill.git
-    ./openstreets-nl-setup.sh
-```
-Now go start TileMill and you should see the project available.
-
-Option 2: Another way is to download the shapefiles and styles into the layers sub-directory:
+To download the shapefiles and styles into the layers sub-directory:
 
 ```
     wget https://ingmapping.com/openstreets-nl/openstreets-nl.zip
@@ -126,13 +110,13 @@ Now go start TileMill and you should see the project available.
 
 ## Exporting your basemap/raster tiles
 
-Inside Tilemill choose to export the project as MBTiles. Once the export is done (this can take a while), [MBUtil](https://github.com/mapbox/mbutil) can be used to export the MBTiles into a directory structure.
+Inside Tilemill you can choose to export the project as MBTiles. Once the export is done (this can take a while), [MBUtil](https://github.com/mapbox/mbutil) can be used to export the MBTiles into a directory structure.
 
 How to export your tiles into a directory structure with MButil:
 
 ```
     git clone https://github.com/ingmapping/openstreets-nl-tilemill.git
-    cd mbutil
+    cd openstreets-nl-tilemill/mbutil
     ./mb-util --image_format=png openstreets-nl.mbtiles openstreets-nl-tiles
 ```
 More information on MBUtil can be found on the original MBUtil repository: https://github.com/mapbox/mbutil. 

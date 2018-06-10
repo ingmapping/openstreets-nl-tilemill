@@ -130,7 +130,21 @@ How to export your tiles into a directory structure with MButil:
 
 ```
     git clone https://github.com/ingmapping/openstreets-nl-tilemill.git
-    cd mb-util
-    ./mb-util --image_format=png openstreets_nl-z0-z15.mbtiles openstreets_nl_tiles
+    cd mbutil
+    ./mb-util --image_format=png openstreets-nl.mbtiles openstreets-nl-tiles
 ```
-More information on MBUtil can be found here: https://github.com/mapbox/mbutil.
+More information on MBUtil can be found on the original MBUtil repository: https://github.com/mapbox/mbutil. 
+
+## Viewing your basemap/raster tiles
+
+You use the pre-generated tiled basemaps using various JavaScript libraries. For example:
+
+* [Leaflet JS](https://leafletjs.com/) is a lightweight open source JavaScript library for building interactive web maps.
+
+```js
+	L.tileLayer('PATH-TO-YOUR-DIRECTORY-HERE/{z}/{x}/{y}.png', {
+		minZoom: 5, maxZoom: 16,
+		attribution: '<a href="https://github.com/ingmapping/openstreets-nl-tilemill/">Basemap created with Tilemill</a> - <a href="https:// 	www.ingmapping.com">ingmapping.com</a>'
+	}).addTo(map);
+```
+[Leaflet JS - demo](https://tileserver.ingmapping.com/openstreets_nl/demo.html).

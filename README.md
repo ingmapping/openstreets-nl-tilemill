@@ -1,13 +1,16 @@
-# Open Streets NL Tilemill/Carto CSS project
+# openstreets-nl-tilemill
+
+A TileMill/CartoCSS project for creating custom styled raster tiles
 
 ## Introduction  
 
-A TileMill/CartoCSS project for creating custom styled raster tiles. 
-
 This project is part of an internship assignment which aimed at creating tiled basemaps for the KNMI geospatial infrastructure. The data and tools used to create the openstreets-nl basemap are open-source. Therefore, this project is reproducible for everyone who wants to create simple basemaps (raster tiled basemaps) from free vector data! This repository contains all the necessary instructions and files to create your own custom styled raster tiles. 
 
-### Open Streets NL style and shapefiles
-The openstreets-nl style example is based on a CartoCSS style and open data from OpenStreetMap and Natural Earth. The openstreets-nl-tilemill project is based on individual shapefiles, which means that there is no need for connecting a PostGIS database with the Tilemill project. The openstreets-nl-tilemill including the relevant shapefiles can be downloaded [here](https://ingmapping.com/openstreets-nl/openstreets-nl.zip) or do:
+### openstreets-nl style and shapefiles
+The openstreets-nl style example is based on a CartoCSS style and open data from OpenStreetMap and Natural Earth. The openstreets-nl-tilemill project is based on individual shapefiles, which means that there is no need for connecting a PostGIS database with the Tilemill project. The openstreets-nl-tilemill including the relevant shapefiles can be downloaded [here](https://ingmapping.com/openstreets-nl/openstreets-nl.zip).
+
+
+To download the styles and shapefiles:
 
 ```
     wget https://ingmapping.com/openstreets-nl/openstreets-nl.zip
@@ -20,11 +23,11 @@ Shapefile original sources:
 * ne_10m_admin_0_countries.shp: Contains data about world countries and boundaries. The original data source comes from Natural Earth which can be found [here](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/).
 * ne_10m_ocean.shp: Contains ocean polygons from Natural Earth vector data which can be found [here](https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-ocean/).
 * nederland.shp: Contains the shape of the Netherlands. It was obtained from the 10m-admin-0-countries Natural Earth data set by performing a selection in QGIS and exporting it into a shapefile. More information on the original dataset can be found [here](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/). 
-* osm_landuse.shp: Contains OpenStreetMap land use data for the Netherlands. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here] http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip. More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
-* osm_places.shp: Contains OpenStreetMap place names data for the Netherlands. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here] http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip. More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
-* osm_roads.shp: Contains OpenStreetMap roads data for the Netherlands. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here] http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip. More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
-* osm_water.shp: Contains OpenStreetMap water data for the Netherlands. It is a copy of osm_roads.shp for displaying roads labels on certains zoom levels. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here] http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip. More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
-* railtracks.shp: Contains railway information for the Netherlands. It was used here for displaying the railtracks in the Netherlands on certain zoom levels. The original data can be downloaded [here]{http://www.imergis.nl/shp/Top10NL_Spoor-shp.zip). It is an extract from the [TOP10NL data set](https://data.overheid.nl/data/dataset/top10nl). Please note that the original data set was converted with  from local RD (EPSG:28992) CRS to the WGS84 coordinate system (EPSG:4326) for use with the Web Mercator projection (EPSG:3857). You can do this with [GDAL ogr2ogr](http://www.gdal.org/ogr2ogr.html) or inside QGIS by setting the layer CRS to WGS84 and exporting the layers as a new shapefile. 
+* osm_landuse.shp: Contains OpenStreetMap land use data for the Netherlands. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here] (http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
+* osm_places.shp: Contains OpenStreetMap place names data for the Netherlands. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here] (http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
+* osm_roads.shp: Contains OpenStreetMap roads data for the Netherlands. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here] (http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
+* osm_water.shp: Contains OpenStreetMap water data for the Netherlands. It is a copy of osm_roads.shp for displaying roads labels on certains zoom levels. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here](http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
+* railtracks.shp: Contains railway information for the Netherlands. It was used here for displaying the railtracks in the Netherlands on certain zoom levels. The original data can be downloaded [here](http://www.imergis.nl/shp/Top10NL_Spoor-shp.zip). It is an extract from the [TOP10NL data set](https://data.overheid.nl/data/dataset/top10nl). Please note that the original data set was converted with  from local RD (EPSG:28992) CRS to the WGS84 coordinate system (EPSG:4326) for use with the Web Mercator projection (EPSG:3857). You can do this with [GDAL ogr2ogr](http://www.gdal.org/ogr2ogr.html) or inside QGIS by setting the layer CRS to WGS84 and exporting the layers as a new shapefile. 
     
 ### Tilemill
 
@@ -119,3 +122,15 @@ You can make a symlink like:
 
 Now go start TileMill and you should see the project available.
 
+## Exporting your basemap/raster tiles
+
+Inside Tilemill choose to export the project as MBTiles. Once the export is done (this can take a while), [MBUtil](https://github.com/mapbox/mbutil) can be used to export the MBTiles into a directory structure.
+
+How to export your tiles into a directory structure with MButil:
+
+```
+    git clone https://github.com/ingmapping/openstreets-nl-tilemill.git
+    cd mb-util
+    ./mb-util --image_format=png openstreets_nl-z0-z15.mbtiles openstreets_nl_tiles
+```
+More information on MBUtil can be found here: https://github.com/mapbox/mbutil.

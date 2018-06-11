@@ -25,7 +25,12 @@ Shapefile original data sources:
 * osm_places.shp: Contains OpenStreetMap place names data for the Netherlands. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here] (http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
 * osm_roads.shp: Contains OpenStreetMap roads data for the Netherlands. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here](http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
 * osm_water.shp: Contains OpenStreetMap water data for the Netherlands. It is a copy of osm_roads.shp for displaying roads labels on certains zoom levels. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here](http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
-* railtracks.shp: Contains railway information for the Netherlands. It was used here for displaying the railtracks in the Netherlands on certain zoom levels. The original data can be downloaded [here](http://www.imergis.nl/shp/Top10NL_Spoor-shp.zip). It is an extract from the [TOP10NL data set](https://data.overheid.nl/data/dataset/top10nl). Please note that the original data set was converted with  from local RD (EPSG:28992) CRS to the WGS84 coordinate system (EPSG:4326) for use with the Web Mercator projection (EPSG:3857). You can do this with [GDAL ogr2ogr](http://www.gdal.org/ogr2ogr.html) or inside QGIS by setting the layer CRS to WGS84 and exporting the layers as a new shapefile. 
+* railtracks.shp: Contains railway information for the Netherlands. It was used here for displaying the railtracks in the Netherlands on certain zoom levels. The original data can be downloaded [here](http://www.imergis.nl/shp/Top10NL_Spoor-shp.zip). It is an extract from the [TOP10NL data set](https://data.overheid.nl/data/dataset/top10nl). Please note that the original data set was converted with  from local RD (EPSG:28992) CRS to the WGS84 coordinate system (EPSG:4326) for use with the Web Mercator projection (EPSG:3857). You can do this with [GDAL ogr2ogr](http://www.gdal.org/ogr2ogr.html): 
+
+```
+ogr2ogr -s_srs EPSG:28992 -t_srs EPSG:4326 TOP10NL_Spoorwegen_WGS84.shp TOP10NL_Spoorwegen.shp
+``` 
+or inside QGIS by setting the layer CRS to WGS84 and exporting the layers as a new shapefile. 
     
 ### Tilemill
 
@@ -67,6 +72,12 @@ To use the container, open your browser at:
 
 ```
 http://localhost:20009
+```
+
+The run.sh script contains instructions to run tilemill with port 20008 and 20009 port exposed using -p 20008:20008 -p 20009:20009 and instructions to mount your project directory using -v argument, namely:
+
+```
+docker run -d --name="docker-tilemill" -p 20008:20008 -p 20009:20009 -v ~/Documents/MapBox/project/:/root/Documents/MapBox/project/ -t ingmapping/tilemill
 ```
 
 More information on how to use docker-tilemill: https://github.com/ingmapping/docker-tilemill. 

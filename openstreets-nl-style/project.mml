@@ -1,0 +1,271 @@
+{
+  "bounds": [
+    3.133,
+    50.6419,
+    7.6689,
+    53.8747
+  ],
+  "center": [
+    5.3802,
+    52.051,
+    9
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 16,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss",
+    "highway.mss",
+    "label.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -68.41738847599987,
+        12.022040106000148,
+        7.198505900000043,
+        53.55809153900013
+      ],
+      "id": "nederland",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/nederland.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "nederland",
+      "layerId": "nederland"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        3.2052977589340967,
+        50.73422939730436,
+        7.244898543809011,
+        53.56976488984799
+      ],
+      "id": "bagwoonplaatsgrenzen",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/BAG-Woonplaatsgrenzen.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "bagwoonplaatsgrenzen",
+      "layerId": "bagwoonplaatsgrenzen",
+      "status": "off"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        3.3424671,
+        50.6959283,
+        7.2511359,
+        54.0168333
+      ],
+      "id": "osmlanduse",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/osm_landuse.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmlanduse",
+      "layerId": "osmlanduse"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        3.2976051,
+        50.6533449,
+        7.2541956,
+        53.5580111
+      ],
+      "id": "osmwater",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/osm_water.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmwater",
+      "layerId": "osmwater"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.9999999999999,
+        -85.051,
+        180,
+        85.051
+      ],
+      "id": "ne10mocean",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/ne_10m_ocean.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "ne10mocean",
+      "layerId": "ne10mocean"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.9999999999999,
+        -85.051,
+        180,
+        83.63410065300012
+      ],
+      "id": "ne10madmin0countries",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/ne_10m_admin_0_countries.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "ne10madmin0countries",
+      "layerId": "ne10madmin0countries"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        3.3286184,
+        50.7421719,
+        7.2671344,
+        53.5418047
+      ],
+      "id": "osmroads",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/osm_roads.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmroads",
+      "layerId": "osmroads"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        3.592947125863586,
+        50.75234099605105,
+        7.215402682777709,
+        53.45489069415321
+      ],
+      "id": "railtracks",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/railtracks.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "railtracks",
+      "layerId": "railtracks"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        3.706333000000002,
+        50.899842,
+        7.042300000000005,
+        53.454026
+      ],
+      "id": "airports",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/airports.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "airports",
+      "layerId": "airports"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        3.3286184,
+        50.7421719,
+        7.2671344,
+        53.5418047
+      ],
+      "id": "osmroads-label",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/osm_roads.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmroads-label",
+      "layerId": "osmroads-label"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        3.3637877,
+        50.7584721,
+        7.2094821,
+        53.50527
+      ],
+      "id": "osmplaces",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/osm_places.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmplaces",
+      "layerId": "osmplaces"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -68.41738847599987,
+        12.022040106000148,
+        7.198505900000043,
+        53.55809153900013
+      ],
+      "id": "nederland-label",
+      "class": "",
+      "Datasource": {
+        "file": "openstreets-nl-shapefiles/nederland.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "nederland-label",
+      "layerId": "nederland-label"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "openstreets-nl",
+  "description": "openstreets-nl custom carto style ",
+  "attribution": ""
+}

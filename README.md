@@ -16,7 +16,6 @@ The openstreets-nl style example is based on a CartoCSS style and open data from
 
 Shapefile original data sources:
 * airports.shp: Contains the shapes of the aiports in the Netherlands. The original data source was the BBG2012 data set  (Bestand Bodemgebruik 2012) which contains information regarding the land use in the Netherlands. More information on the BBG2012 can be found [here](https://data.overheid.nl/data/dataset/bestand-bodemgebruik-2012-shape-file).
-* BAG-Woonplaatsgrenzen.shp: Contains the shapes of the residence borders in the Netherlands. The original data can be downloaded [here](http://www.imergis.nl/shp/BAG-Woonplaatsgrenzen-shp.zip). It was an extract from the BAG (Basisregistraties Adressen en Gebouwen). More information on the BAG data set can be found [here](https://data.overheid.nl/data/dataset/basisregistratie-adressen-en-gebouwen--bag-). More information on BAG extract can be found [here](https://www.kadaster.nl/-/bag-extract). 
 * ne_10m_admin_0_countries.shp: Contains data about world countries and boundaries. The original data source comes from Natural Earth which can be found [here](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/).
 * ne_10m_ocean.shp: Contains ocean polygons from Natural Earth vector data which can be found [here](https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-ocean/).
 * nederland.shp: Contains the shape of the Netherlands. It was obtained from the 10m-admin-0-countries Natural Earth data set by performing a selection in QGIS and exporting it into a shapefile. More information on the original dataset can be found [here](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/). 
@@ -41,7 +40,6 @@ Order of the layers in openstreets-nl Tilemill project (see openstreets-nl.mml):
 * ne10ocean (ne_10m_ocean.shp)
 * osmwater (osm_water.shp)
 * osmlanduse (osm_landuse.shp)
-* bagwoonplaatsgrenzen (BAG-Woonplaatsgrenzen.shp)
 * nederland (nederland.shp)
 
 ### Tilemill

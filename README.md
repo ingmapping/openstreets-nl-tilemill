@@ -26,8 +26,8 @@ Shapefile original data sources:
 * osm_water.shp: Contains OpenStreetMap water data for the Netherlands. The OpenStreetMap water dataset has been clipped with the data set of the Netherlands (with geoprocessing tools in ArcMap or QGIS). The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here](http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
 * railtracks.shp: Contains railway information for the Netherlands. It was used here for displaying the railtracks in the Netherlands on certain zoom levels. The original data can be downloaded [here](http://www.imergis.nl/shp/Top10NL_Spoor-shp.zip). It is an extract from the [TOP10NL data set](https://data.overheid.nl/data/dataset/top10nl). Please note that the original data set was converted from local RD (EPSG:28992) CRS to the WGS84 coordinate system (EPSG:4326) for use with the Web Mercator projection (EPSG:3857). You can do this inside QGIS by setting the layer CRS to WGS84 and exporting the layers as a new shapefile or with [GDAL ogr2ogr](http://www.gdal.org/ogr2ogr.html) with the following command: 
 
-
-```ogr2ogr -s_srs EPSG:28992 -t_srs EPSG:4326 TOP10NL_Spoorwegen_WGS84.shp TOP10NL_Spoorwegen.shp
+```
+ogr2ogr -s_srs EPSG:28992 -t_srs EPSG:4326 TOP10NL_Spoorwegen_WGS84.shp TOP10NL_Spoorwegen.shp
 ``` 
 
 Order of the layers in openstreets-nl Tilemill project (see openstreets-nl.mml):

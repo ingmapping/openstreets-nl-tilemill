@@ -4,6 +4,14 @@ if [ ! -d ~/Documents/MapBox/project ]; then
   mkdir -p ~/Documents/MapBox/project/;
 fi
 
+if [ ! -d ~/Documents/MapBox/cache ]; then
+  mkdir -p ~/Documents/MapBox/cache/;
+fi
+
+if [ ! -d ~/Documents/MapBox/export ]; then
+  mkdir -p ~/Documents/MapBox/export/;
+fi
+
 cd ~/Documents/MapBox/project/
 
 wget https://ingmapping.com/openstreets-nl/openstreets-nl.zip

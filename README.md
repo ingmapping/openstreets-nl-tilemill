@@ -1,4 +1,4 @@
-# OpenstreetsNL Tilemill project
+# OpenStreetsNL Tilemill project
 
 A TileMill/CartoCSS project for creating custom styled raster tiles. 
 
@@ -11,7 +11,7 @@ A TileMill/CartoCSS project for creating custom styled raster tiles.
 
 This project is part of an internship assignment which aimed at creating tiled basemaps for the KNMI geospatial infrastructure. The data and tools used to create the openstreets-nl basemap are open-source. Therefore, this project is reproducible for everyone who wants to create simple basemaps (raster tiled basemaps) from free vector data! This repository contains all the necessary instructions and files to create your own custom styled raster tiles. 
 
-### OpenstreetsNL style and shapefiles
+### OpenStreetsNL style and shapefiles
 The openstreets-nl style example is based on a CartoCSS style and open data from OpenStreetMap and Natural Earth. The openstreets-nl-tilemill project is based on individual shapefiles, which means that there is no need for connecting a PostGIS database with the Tilemill project. The openstreets-nl-tilemill including the relevant shapefiles can be downloaded [here](https://ingmapping.com/openstreets-nl/openstreets-nl.zip).
 
 Shapefile original data sources:

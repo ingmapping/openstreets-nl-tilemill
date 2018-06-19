@@ -16,31 +16,30 @@ The openstreets-nl style example is based on a CartoCSS style and open data from
 
 Shapefile original data sources:
 * airports.shp: Contains the shapes of the aiports in the Netherlands. The original data source was the BBG2012 data set  (Bestand Bodemgebruik 2012) which contains information regarding the land use in the Netherlands. More information on the BBG2012 can be found [here](https://data.overheid.nl/data/dataset/bestand-bodemgebruik-2012-shape-file).
-* ne_10m_admin_0_countries.shp: Contains data about world countries and boundaries. The original data source comes from Natural Earth which can be found [here](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/).
 * ne_10m_ocean.shp: Contains ocean polygons from Natural Earth vector data which can be found [here](https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-ocean/).
-* nederland.shp: Contains the shape of the Netherlands. It was obtained from the 10m-admin-0-countries Natural Earth data set by performing a selection in QGIS and exporting it into a shapefile. More information on the original dataset can be found [here](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/). 
-* osm_landuse.shp: Contains OpenStreetMap land use data for the Netherlands. The OpenStreetMap land use dataset has been clipped with the data set of the Netherlands (with geoprocessing tools in ArcMap or QGIS). The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here](http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
+* nederland.shp: Contains the shape of the Netherlands. It was used here to display the shape of the nNetherlands for zoom level at lower zoom levels. It was obtained from the 10m-admin-0-countries Natural Earth data set by performing a selection in QGIS and exporting it into a shapefile. More information on the original dataset can be found [here](https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/). 
+* osm_nl.shp. Contains OpenStreetMap polygon and land boundary for the Netherlands. It was used here for the shape of the Netherlands and boundary at higher zoom levels. The original data source comes from an [osm extract by wambachers-osm.website](https://wambachers-osm.website/boundaries/). Please note that this dataset was used for boundaries of the Netherlands because  earlier attempts with Natural Earth datasets produced borders which did not match well with the osm datasets. 
+* land_polygons.shp. Contains polygons for all land areas in the world. The original shapefiles can be downloaded [here](http://data.openstreetmapdata.com/land-polygons-complete-4326.zip) from openstreetmapdata.com. Please note that this dataset was used for shapes of the world at lower zoom levels because earlier attempts with Natural Earth datasets did not match well with the osm datasets. 
+* osm_landuse.shp: Contains OpenStreetMap land use data for the Netherlands. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here](http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
 * osm_places.shp: Contains OpenStreetMap place names data for the Netherlands. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here](http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
 * osm_roads.shp: Contains OpenStreetMap roads data for the Netherlands. The OpenStreetMap roads dataset has been clipped with the data set of the Netherlands (with geoprocessing tools in ArcMap or QGIS). The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here](http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf). 
 * osm_water.shp: Contains OpenStreetMap water data for the Netherlands. The OpenStreetMap water dataset has been clipped with the data set of the Netherlands (with geoprocessing tools in ArcMap or QGIS). The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here](http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf).
-* railtracks.shp: Contains railway information for the Netherlands. It was used here for displaying the railtracks in the Netherlands on certain zoom levels. The original data can be downloaded [here](http://www.imergis.nl/shp/Top10NL_Spoor-shp.zip). It is an extract from the [TOP10NL data set](https://data.overheid.nl/data/dataset/top10nl). Please note that the original data set was converted from local RD (EPSG:28992) CRS to the WGS84 coordinate system (EPSG:4326) for use with the Web Mercator projection (EPSG:3857). You can do this inside QGIS by setting the layer CRS to WGS84 and exporting the layers as a new shapefile or with [GDAL ogr2ogr](http://www.gdal.org/ogr2ogr.html) with the following command: 
-
-```
-ogr2ogr -s_srs EPSG:28992 -t_srs EPSG:4326 TOP10NL_Spoorwegen_WGS84.shp TOP10NL_Spoorwegen.shp
-``` 
+* osm_railways.shp: Contains railway information for the Netherlands. It was used here for displaying the railtracks in the Netherlands on certain zoom levels. The original data source comes from an [extract by Geofabrik](http://download.geofabrik.de/europe/netherlands.html). The original shapefiles can be downloaded [here](http://download.geofabrik.de/europe/netherlands-latest-free.shp.zip). More information on the OpenStreetMap shapefiles can be found [here](http://download.geofabrik.de/osm-data-in-gis-formats-free.pdf)
 
 Order of the layers in openstreets-nl Tilemill project (see openstreets-nl.mml):
 * nederland-label (nederland.shp)
 * osmplaces (osm_places.shp)
 * osmroads-label (osm_roads.shp)
+* osmnlboundary (osm_nl.shp)
 * airports (airports.shp)
-* railtracks (railtracks.shp)
+* osmrailways (osm_railways.shp)
 * osmroads (osm_roads.shp)
-* ne10admin0countries ne_10m_admin_0_countries.shp
-* ne10ocean (ne_10m_ocean.shp)
-* osmwater (osm_water.shp)
 * osmlanduse (osm_landuse.shp)
+* osmwater (osm_water.shp)
+* osmnl (osm_nl.shp)
 * nederland (nederland.shp)
+* world (land_polygons.shp)
+* ne10ocean (ne_10m_ocean.shp)
 
 ### Tilemill
 

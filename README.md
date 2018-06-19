@@ -4,7 +4,7 @@ A TileMill/CartoCSS project for creating custom styled raster tiles.
 
 ![alt text](https://github.com/ingmapping/openstreets-nl-tilemill/blob/master/demo.gif)
 
-[View Demo](https://tileserver.ingmapping.com/openstreets_nl/demo.html).
+[View Demo](https://tileserver.ingmapping.com/openstreets_nl/demo.html)
 
 
 ## Introduction  

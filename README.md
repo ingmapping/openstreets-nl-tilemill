@@ -146,7 +146,7 @@ More information on MBUtil can be found on the original MBUtil repository: https
 
 ## Viewing your basemap/raster tiles
 
-You can use the pre-generated tiled basemaps using various JavaScript mapping libraries. For example:
+Once that you have your tiles exported in a folder directory structure, you can view the generated raster tiles using various JavaScript mapping libraries. For example:
 
 * [Leaflet JS](https://leafletjs.com/) is a lightweight open source JavaScript library for building interactive web maps.
 

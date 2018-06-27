@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenStreetsNL</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet-src.js"></script>
+    <script>
+      var overlay;
+      function init() {
+          var mapMinZoom = 1;
+          var mapMaxZoom = 16;
+        var map = L.map('map').setView([52.258,5.401], 8);
+        
+        tiles = L.tileLayer('file:////PATH-TO-YOUR-TILES-DIRECTORY-HERE/{z}/{x}/{y}.png', {
+            minZoom: mapMinZoom, maxZoom: mapMaxZoom,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | <a href="https://github.com/ingmapping/openstreets-nl-tilemill/"> openstreets-nl</a> project - <a href="https://www.ingmapping.com">ingmapping.com</a>'
+          }).addTo(map);
+      }
+    </script>
+    <style>
+      html, body, #map { width:100%; height:100%; margin:0; padding:0; }
+    </style>
+  </head>
+  <body onload="init()">
+    <div id="map"></div>
+  </body>
+</html>

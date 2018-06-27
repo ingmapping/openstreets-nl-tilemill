@@ -151,9 +151,9 @@ You can use the pre-generated tiled basemaps using various JavaScript mapping li
 * [Leaflet JS](https://leafletjs.com/) is a lightweight open source JavaScript library for building interactive web maps.
 
 ```js
-	L.tileLayer('PATH-TO-YOUR-DIRECTORY-HERE/{z}/{x}/{y}.png', {
+	L.tileLayer('file:////PATH-TO-YOUR-TILES-DIRECTORY-HERE/{z}/{x}/{y}.png', {
 		minZoom: 5, maxZoom: 16,
-		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | <a href="https://github.com/ingmapping/openstreets-nl-tilemill/"> openstreets-nl project</a> - <a href="https://www.ingmapping.com">ingmapping.com</a>'
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | <a href="https://github.com/ingmapping/openstreets-nl-tilemill/"> openstreets-nl</a> project - <a href="https://www.ingmapping.com">ingmapping.com</a>'
 	}).addTo(map);
 ```
 [Leaflet JS - demo](https://tileserver.ingmapping.com/openstreets_nl/demo.html).

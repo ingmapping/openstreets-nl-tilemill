@@ -1,0 +1,4 @@
+Version 30-06-2018
+
+For up-to-date version of docker-openstreets-nl check the original repository:
+https://github.com/ingmapping/docker-openstreets-nl/

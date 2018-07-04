@@ -12,7 +12,7 @@ Related project: [openstreets-nl-tilemill](https://github.com/ingmapping/openstr
 
 This project is part of an internship assignment which aimed at creating tiled basemaps for the KNMI geospatial infrastructure. The data and tools used to create the openstreets-nl basemap are open-source. Therefore, this project is reproducible for everyone who wants to create simple basemaps (raster tiled basemaps) from free vector data! This repository contains all the necessary instructions and files to generate openstreets-nl tiles with Mapnik and a generate_tiles.py script inside a docker container. 
 
-The openstreets-nl basemap style was based on the [openstreets-nl-tilemill](https://github.com/ingmapping/openstreets-nl-tilemill/) project were OpenStreetMap/Natural Earth data was used to create custom styled raster tiles with CartoCSS/Tilemill. Instead of using Tilemill to create the tiles, this directory contains instructions to generate customized openstreets-nl tiles with Mapnik generate_tiles.py script inside a docker container. 
+The openstreets-nl basemap style was based on the [openstreets-nl-tilemill](https://github.com/ingmapping/openstreets-nl-tilemill/) project where OpenStreetMap/Natural Earth data was used to create custom styled raster tiles with CartoCSS/Tilemill. Instead of using Tilemill to create the tiles, this directory contains instructions to generate customized openstreets-nl tiles with Mapnik generate_tiles.py script inside a docker container. 
 
 ## How to set up docker-openstreets-nl 
 

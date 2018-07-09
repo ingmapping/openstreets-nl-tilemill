@@ -35,7 +35,8 @@
     <StyleName>countries-outline</StyleName>
     <StyleName>countries</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/home/ingmar/Documents/MapBox/project/openstreets-nl-rd/shp/countries.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/home/
+/Documents/MapBox/project/openstreets-nl-rd/shp/countries.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -64,7 +65,7 @@
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
     <StyleName>nederland</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/home/ingmar/Documents/MapBox/project/openstreets-nl-rd/shp/nederland.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/root/Documents/MapBox/project/openstreets-nl-rd/shp/nederland.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -79,7 +80,7 @@
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
     <StyleName>osmnl</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/home/ingmar/Documents/MapBox/project/openstreets-nl-rd/shp/osm_nl.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/root/Documents/MapBox/project/openstreets-nl-rd/shp/osm_nl.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -94,7 +95,7 @@
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
     <StyleName>osmwater</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/home/ingmar/Documents/MapBox/project/openstreets-nl-rd/shp/osm_water.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/root/Documents/MapBox/project/openstreets-nl-rd/shp/osm_water.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -167,7 +168,7 @@
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
     <StyleName>osmlanduse</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/home/ingmar/Documents/MapBox/project/openstreets-nl-rd/shp/osm_landuse.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/root/Documents/MapBox/project/openstreets-nl-rd/shp/osm_landuse.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -1491,7 +1492,7 @@
     <StyleName>osmroads-case</StyleName>
     <StyleName>osmroads-fill</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/home/ingmar/Documents/MapBox/project/openstreets-nl-rd/shp/osm_roads.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/root/Documents/MapBox/project/openstreets-nl-rd/shp/osm_roads.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -1536,7 +1537,7 @@
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
     <StyleName>osmrailways</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/home/ingmar/Documents/MapBox/project/openstreets-nl-rd/shp/osm_railways.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/root/Documents/MapBox/project/openstreets-nl-rd/shp/osm_railways.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -1558,7 +1559,7 @@
   srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
     <StyleName>airports</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/home/ingmar/Documents/MapBox/project/openstreets-nl-rd/shp/airports.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/root/Documents/MapBox/project/openstreets-nl-rd/shp/airports.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -1672,7 +1673,7 @@
     <StyleName>osmroads-label</StyleName>
     <StyleName>osmroads-label-oneway_arrow</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/home/ingmar/Documents/MapBox/project/openstreets-nl-rd/shp/osm_roads.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/root/Documents/MapBox/project/openstreets-nl-rd/shp/osm_roads.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -1809,7 +1810,7 @@
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
     <StyleName>osmplaces</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/home/ingmar/Documents/MapBox/project/openstreets-nl-rd/shp/osm_places.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/root/Documents/MapBox/project/openstreets-nl-rd/shp/osm_places.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>
@@ -1844,7 +1845,7 @@
   srs="+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs">
     <StyleName>nederland-label</StyleName>
     <Datasource>
-       <Parameter name="file"><![CDATA[/home/ingmar/Documents/MapBox/project/openstreets-nl-rd/shp/nederland.shp]]></Parameter>
+       <Parameter name="file"><![CDATA[/root/Documents/MapBox/project/openstreets-nl-rd/shp/nederland.shp]]></Parameter>
        <Parameter name="type"><![CDATA[shape]]></Parameter>
     </Datasource>
   </Layer>

@@ -12,7 +12,7 @@ A TileMill/CartoCSS project for creating custom styled raster tiles.
 This project is part of an internship assignment which aimed at creating tiled basemaps for the KNMI geospatial infrastructure. The data and tools used to create the openstreets-nl basemap are open-source. Therefore, this project is reproducible for everyone who wants to create simple basemaps (raster tiled basemaps) from free vector data! This repository contains all the necessary instructions and files to create your own custom styled raster tiles. 
 
 ### OpenStreetsNL style and shapefiles
-The openstreets-nl style example is based on a CartoCSS style and open data from OpenStreetMap and Natural Earth. The openstreets-nl-tilemill project is based on individual shapefiles, which means that there is no need for connecting a PostGIS database with the Tilemill project. The openstreets-nl-tilemill including the relevant shapefiles can be downloaded [here](https://ingmapping.com/openstreets-nl/openstreets-nl.zip).
+The openstreets-nl style example is based on a CartoCSS style and open data from OpenStreetMap and Natural Earth. The openstreets-nl-tilemill project is based on individual shapefiles, which means that there is no need for connecting a PostGIS database with the Tilemill project. The tilemill project for the openstreets-nl style in [EPSG:3857](https://epsg.io/3857) projection including the relevant shapefiles can be downloaded [here](https://ingmapping.com/openstreets-nl/openstreets-nl.zip). The tilemill project for the openstreets-nl-rd style in [EPSG:28992](https://epsg.io/28992) projection including the relevant shapefiles can be downloaded [here](https://ingmapping.com/openstreets-nl/openstreets-nl-rd.zip). 
 
 Shapefile original data sources:
 * airports.shp: Contains the shapes of the aiports in the Netherlands. The original data source was the BBG2012 data set  (Bestand Bodemgebruik 2012) which contains information regarding the land use in the Netherlands. More information on the BBG2012 can be found [here](https://data.overheid.nl/data/dataset/bestand-bodemgebruik-2012-shape-file).
@@ -128,14 +128,14 @@ and then go to `localhost:20009` in your web browser
 
 #### Download shapefiles and styles
 
-To download the shapefiles and styles into the layers sub-directory:
+To download the shapefiles and openstreets-nl styles into the layers sub-directory:
 
 ```
     wget https://ingmapping.com/openstreets-nl/openstreets-nl.zip
     unzip openstreets-nl
 ```
 
-or 
+or for openstreets-nl-rd (projection EPSG:28892):
 
 
 ```
@@ -144,8 +144,7 @@ or
 ```
 
 
-Now copy or link the project subdirectory called 'openstreets-nl' into
-your TileMill projects directory at:
+The tilemill project should be in inside the your tilemill project directory:
 
     ~/Documents/MapBox/project/
 

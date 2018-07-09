@@ -1,0 +1,250 @@
+{
+  "bounds": [
+    -0.1382,
+    2.6301,
+    2.894,
+    5.7852
+  ],
+  "center": [
+    1.3085,
+    4.2113,
+    5
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 16,
+  "srs": "+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +no_defs",
+  "Stylesheet": [
+    "style.mss",
+    "highway.mss",
+    "labels.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.99978348919964,
+        -85.051,
+        180,
+        83.63381093402977
+      ],
+      "id": "countries",
+      "class": "",
+      "Datasource": {
+        "file": "shp/countries.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "countries",
+      "layerId": "countries"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -68.41738847599987,
+        12.022040106000148,
+        7.198505900000043,
+        53.55809153900013
+      ],
+      "id": "nederland",
+      "class": "",
+      "Datasource": {
+        "file": "shp/nederland.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "nederland",
+      "layerId": "nederland"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -70.0642091,
+        11.9783041,
+        7.2274985,
+        53.5564811
+      ],
+      "id": "osmnl",
+      "class": "",
+      "Datasource": {
+        "file": "shp/osm_nl.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmnl",
+      "layerId": "osmnl"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        3.2976051,
+        50.6533449,
+        7.2541956,
+        53.5580111
+      ],
+      "id": "osmwater",
+      "class": "",
+      "Datasource": {
+        "file": "shp/osm_water.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmwater",
+      "layerId": "osmwater"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        3.3424671,
+        50.6959283,
+        8.7160217,
+        55.519536
+      ],
+      "id": "osmlanduse",
+      "class": "",
+      "Datasource": {
+        "file": "shp/osm_landuse.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmlanduse",
+      "layerId": "osmlanduse"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        3.3286184,
+        50.7421719,
+        7.2671344,
+        53.5418047
+      ],
+      "id": "osmroads",
+      "class": "",
+      "Datasource": {
+        "file": "shp/osm_roads.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmroads",
+      "layerId": "osmroads"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        3.5929226,
+        50.7500767,
+        7.224044,
+        53.4624761
+      ],
+      "id": "osmrailways",
+      "class": "",
+      "Datasource": {
+        "file": "shp/osm_railways.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmrailways",
+      "layerId": "osmrailways"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        3.706333000000002,
+        50.899842,
+        7.042300000000005,
+        53.454026
+      ],
+      "id": "airports",
+      "class": "",
+      "Datasource": {
+        "file": "shp/airports.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "airports",
+      "layerId": "airports"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        3.3286184,
+        50.7421719,
+        7.2671344,
+        53.5418047
+      ],
+      "id": "osmroads-label",
+      "class": "",
+      "Datasource": {
+        "file": "shp/osm_roads.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmroads-label",
+      "layerId": "osmroads-label"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        3.3637877,
+        50.7584721,
+        7.2094821,
+        53.50527
+      ],
+      "id": "osmplaces",
+      "class": "",
+      "Datasource": {
+        "file": "shp/osm_places.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "osmplaces",
+      "layerId": "osmplaces"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -68.41738847599987,
+        12.022040106000148,
+        7.198505900000043,
+        53.55809153900013
+      ],
+      "id": "nederland-label",
+      "class": "",
+      "Datasource": {
+        "file": "shp/nederland.shp"
+      },
+      "layer": null,
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "nederland-label",
+      "layerId": "nederland-label"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "openstreets-nl-rd",
+  "description": "CartoCSS style for openstreets-nl. Custom projection of Amersfoorts/RD New, EPSG 28992.\n\nhttps://github.com/ingmapping/openstreets-nl-tilemill/tree/master/openstreets-nl-rd",
+  "attribution": ""
+}

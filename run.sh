@@ -18,7 +18,7 @@ wget https://ingmapping.com/openstreets-nl/openstreets-nl.zip
 unzip openstreets-nl 
 
 wget https://ingmapping.com/openstreets-nl/openstreets-nl-rd.zip
-unzip openstreets-nl 
+unzip openstreets-nl-rd 
 
 docker run -d --name="docker-tilemill" -p 20008:20008 -p 20009:20009 -v ~/Documents/MapBox/project/:/root/Documents/MapBox/project/ -t ingmapping/tilemill
 

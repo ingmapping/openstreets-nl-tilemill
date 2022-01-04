@@ -4,7 +4,7 @@ A TileMill/CartoCSS project for creating custom styled raster tiles.
 
 ![alt text](https://github.com/ingmapping/openstreets-nl-tilemill/blob/master/demo.gif)
 
-[View Demo](https://tileserver.ingmapping.com/openstreets_nl/demo.html)
+[View Demo](https://ingmapping.xyz/tileserver/openstreets_nl/index.html)
 
 
 ## Introduction  
@@ -175,4 +175,4 @@ Once that you have your tiles exported in a folder directory structure, you can 
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors | <a href="https://github.com/ingmapping/openstreets-nl-tilemill/"> openstreets-nl</a> project - <a href="https://www.ingmapping.com">ingmapping.com</a>'
 	}).addTo(map);
 ```
-[Leaflet JS - demo](https://tileserver.ingmapping.com/openstreets_nl/demo.html).
+[Leaflet JS - demo](https://ingmapping.xyz/tileserver/openstreets_nl/index.html).
